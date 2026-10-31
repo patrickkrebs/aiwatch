@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aiwatch"
+version = "0.1.0"
+description = "wfwatch with Codex / ChatGPT sessions added: one live terminal view of both AIs"
+readme = "README.md"
+license = "Apache-2.0 AND MIT"
+license-files = ["LICENSE", "NOTICE", "licenses/*"]
+authors = [{ name = "Patrick Krebs" }]
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13",
+    "wfwatch @ git+https://github.com/zamirka/wfwatch@v0.1.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/patrickkrebs/aiwatch"
+
+[project.scripts]
+aiwatch = "aiwatch.cli:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aiwatch"]

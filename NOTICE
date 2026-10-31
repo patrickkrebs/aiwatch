@@ -1,0 +1,32 @@
+aiwatch
+Copyright 2026 Patrick Krebs
+https://github.com/patrickkrebs/aiwatch
+
+This product includes software developed by Patrick Krebs, licensed under the
+Apache License, Version 2.0 (see LICENSE). Under section 4(d) of that license,
+any redistribution of this work or a derivative of it must keep this NOTICE
+file (or its attribution notices) and credit Patrick Krebs as the original
+author of aiwatch.
+
+-------------------------------------------------------------------------------
+Third-party software
+-------------------------------------------------------------------------------
+
+wfwatch
+Copyright (c) 2026 Zamir Musaev
+https://github.com/zamirka/wfwatch
+Licensed under the MIT License; the full text is in licenses/wfwatch-LICENSE.txt.
+
+aiwatch depends on wfwatch and builds on it. Portions of src/aiwatch/cli.py are
+adapted from wfwatch v0.1.1 (wfwatch/cli.py and wfwatch/render.py) and remain
+under the MIT License; they are marked in the source.
+
+-------------------------------------------------------------------------------
+Trademarks
+-------------------------------------------------------------------------------
+
+aiwatch is an independent, unofficial project. It is not affiliated with,
+endorsed by or supported by Anthropic, OpenAI, or the author of wfwatch.
+Claude and Claude Code are trademarks of Anthropic, PBC. ChatGPT and Codex are
+trademarks of OpenAI. aiwatch reads files these tools write for their own use;
+their format may change with any release.
