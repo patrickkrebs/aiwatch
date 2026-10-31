@@ -26,7 +26,8 @@ AIWATCH  overview          workflows: 0 running   sessions: 2 working · 1 idle 
 
 ## Install
 
-Needs [uv](https://docs.astral.sh/uv/) and Python 3.11+ (macOS or Linux).
+Needs [uv](https://docs.astral.sh/uv/) and Python 3.11+, on macOS, Linux or Windows. On Windows, use
+Windows Terminal (or any terminal with Unicode and ANSI color) for the live view.
 
 ```bash
 uv tool install git+https://github.com/patrickkrebs/aiwatch

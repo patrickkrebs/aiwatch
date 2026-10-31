@@ -155,7 +155,10 @@ class _Terminated(BaseException):
 
 def run_live(app: AiApp, console: Console) -> int:
     """wfwatch's main loop, also re-reading Codex."""
-    from wfwatch.keys import Keys
+    if sys.platform == "win32":
+        from .winkeys import Keys
+    else:
+        from wfwatch.keys import Keys
 
     tracker, codex = app.tracker, app.codex
 
