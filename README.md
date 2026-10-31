@@ -9,20 +9,20 @@ and timer, the tool-call sparkline, calls / context / output, the latest actions
 agent mode, the threads it spawns become **subagents of the thread that spawned them** — cards in
 its diagram with their own sparkline, status and result — not separate sessions.
 
-```
-AIWATCH  overview          workflows: 0 running   sessions: 2 working · 1 idle   codex: 1 working
-╭─  3  ◆ Fix the login redirect  ───────────────────────────────────────────────────────╮
-│ my-app · claude-desktop · opus 5.5                                    ● working 2:59 │
-│ → Bash Run the test suite  0:03 ago                                                  │
-╰──────────────────────────────────────────────────────────────────────  no workflow  ─╯
-╭─  4  ◆ Create 10-agent news summary  ────────────────────────────────────────────────╮
-│ research · codex · gpt 6.1                                            ● working 1:12 │
-│ → spawn_agent news_08_sports  0:01 ago                                               │
-│   ⠹ Locke · news_01_world  exec text(await tools.web__run({search_query:…            │
-│   ⠹ Curie · news_02_us  send_message /root                                           │
-╰─────────────────────────────────────────────────────  no workflow · 2 subagents  ─╯
- 1–9  open   Tab  next   q  quit
-```
+**Overview** — Claude Code sessions and Codex threads side by side, with a shared log:
+
+![aiwatch overview: Claude Code sessions and Codex threads in one screen](docs/screenshots/overview.svg)
+
+**Codex agent mode** — the agents a thread spawns are drawn as its subagents, each with its own
+status, sparkline and result:
+
+![A Codex thread in agent mode with six spawned agents](docs/screenshots/codex-agents.svg)
+
+**A Claude Code session** — wfwatch's session diagram, with its subagents and latest actions:
+
+![A Claude Code session with two running subagents](docs/screenshots/claude-session.svg)
+
+*Screenshots show demo sessions.*
 
 ## Install
 
